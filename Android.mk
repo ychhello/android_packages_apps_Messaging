@@ -42,6 +42,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-common-framesequence \
     com.android.vcard \
     guava \
+    libSudaSdk \
     libphonenumber
 
 include $(LOCAL_PATH)/version.mk
@@ -66,7 +67,10 @@ endif
 
 LOCAL_PACKAGE_NAME := messaging
 
-LOCAL_SDK_VERSION := current
+LOCAL_CERTIFICATE := platform
+
+# LOCAL_SDK_VERSION := current
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 include $(BUILD_PACKAGE)
 
